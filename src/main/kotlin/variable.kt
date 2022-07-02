@@ -5,7 +5,7 @@ class Person (name: String){
 fun main(args: Array<String>) {
     /**
      * var: 가변 변수 선언
-     * val: 불변 변수 선언,
+     * val: 불변 변수 선언
      */
     var num1: Long = 10L; // 타입추론이 자동으로 되나 선언해줘도 무방
     val num2 = 10;
