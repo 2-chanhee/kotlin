@@ -13,8 +13,13 @@ fun main(args: Array<String>) {
     println(startsWithA1(null))
     println(startsWithA2(null))
     println(startsWithA3(null))
-}
 
+    // 3. null 아님 단언, if null -> runtime error (NPE)
+    println(startsWithA4(null))
+
+    // 4. 플랫폼 타입: 코틀린에서 null인지 아닌지 알 수 없는 타입
+
+}
 fun startsWithA1(str: String?): Boolean{
     return str?.startsWith("A") ?: throw IllegalArgumentException("null IllegalArgumentException")
 }
@@ -25,5 +30,9 @@ fun startsWithA2(str: String?): Boolean? {
 
 fun startsWithA3(str: String?): Boolean {
     return str?.startsWith("A") ?: false
+}
 
+fun startsWithA4(str: String?): Boolean {
+    // nullable type이나 not null로 하고싶다면 !! 사용
+    return str!!.startsWith("A")
 }
