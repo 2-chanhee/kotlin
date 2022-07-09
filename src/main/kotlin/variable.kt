@@ -1,6 +1,3 @@
-class Person (name: String){
-    val name = name
-}
 // 변수
 fun main(args: Array<String>) {
     /**
